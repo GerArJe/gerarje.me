@@ -1,5 +1,5 @@
 module.exports = {
-	extends: ["plugin:astro/recommended"],
+	extends: ["plugin:astro/recommended", "plugin:@typescript-eslint/recommended"],
 	overrides: [
 		{
 			files: ["*.astro"],
@@ -12,11 +12,9 @@ module.exports = {
 		},
 		{
 			files: ["*.ts"],
-			plugins: ["@typescript-eslint"],
 			parser: "@typescript-eslint/parser",
-			parserOptions: {
-				ecmaVersion: es2024,
-			},
+			parserOptions: { project: ["./tsconfig.json"] },
+			plugins: ["@typescript-eslint"],
 			rules: {},
 		},
 	],
