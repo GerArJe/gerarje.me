@@ -12,9 +12,10 @@ module.exports = {
 		},
 		{
 			files: ["*.ts"],
+			plugins: ["@typescript-eslint"],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
-				parser: "@typescript-eslint/parser",
+				ecmaVersion: es2024,
 			},
 			rules: {},
 		},
