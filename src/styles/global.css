@@ -238,3 +238,7 @@ h5 {
 		gap: 12rem;
 	}
 }
+
+.icon--size {
+	font-size: 1.33em;
+}
