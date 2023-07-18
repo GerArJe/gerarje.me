@@ -1,4 +1,5 @@
 ---
+import { FULL_NAME } from '../core/text.contant';
 import Icon from './Icon.astro';
 const currentYear = new Date().getFullYear();
 ---
@@ -6,15 +7,15 @@ const currentYear = new Date().getFullYear();
 <footer>
 	<div class="group">
 		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
+			Designed & Developed with <a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<p>&copy; {currentYear} Jeanine White</p>
+		<p>&copy; {currentYear} {FULL_NAME}</p>
 	</div>
 	<p class="socials">
-		<a href="https://twitter.com/me"> Twitter</a>
-		<a href="https://github.com/me"> GitHub</a>
-		<a href="https://codepen.io/me"> CodePen</a>
+		<a href="https://twitter.com/gerarje"> Twitter</a>
+		<a href="https://github.com/GerArJe"> GitHub</a>
+		<a href="https://co.linkedin.com/in/germanarevalojerez"> Linkedin</a>
 	</p>
 </footer>
 <style>
