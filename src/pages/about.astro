@@ -1,48 +1,84 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import TimeLine from '../components/TimeLine.astro';
+import { FULL_NAME } from '../core/constants/text.contant';
+import type { ITimeline } from '../core/models/timeline.model';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const education: ITimeline[] = [
+	{
+		title: 'Universidad Autónoma de Bucaramanga',
+		subtitle: 'Master in Software Management, Application and Development',
+		date: '2021 - 2023',
+	},
+	{
+		title: 'Universidad Autónoma de Bucaramanga',
+		subtitle: 'Systems Engineering',
+		date: '2015 - 2020',
+	},
+];
+
+const experiences: ITimeline[] = [
+	{
+		title: 'Solution Consultant II',
+		subtitle: 'Sophos Solutions',
+		date: 'Aug 2021 - Present',
+		items: ['Web development with Angular'],
+	},
+	{
+		title: 'Frontend developer',
+		subtitle: 'Hexa Solutions',
+		date: 'Oct 2020 - Aug 2021',
+		items: ['Mobile application development with Ionic', 'Web development with Angular'],
+	},
+	{
+		title: 'Systems Engineering Intern',
+		subtitle: 'Electrificadora de Santander ESSA ESP',
+		date: 'Mar 2020 - Sep 2020',
+		items: ['Data analytics with Power BI', 'Mobile application development with Ionic'],
+	},
+];
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title={`About | ${FULL_NAME}`} description=`About ${FULL_NAME}`>
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero title="About" tagline="Thanks for stopping by. Read below to learn more about myself and my background.">
-				<img width="1553" height="873" src="/assets/at-work.jpg" alt="Jeanine White at work with a colleague" />
-			</Hero>
-
+			<Hero title="About" tagline="Thanks for stopping by. Read below to learn more about myself and my background." />
 			<section>
-				<h2 class="section-title">Background</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum
-						vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim
-						lobortis scelerisque fermentum dui faucibus in ornare.
+						Frontend Developer with experience in web development with Angular and mobile apps with Ionic. Knowledge in
+						Flutter. Easily Adaptable to changes. Always looking to learn new knowledge, technologies and develop
+						skills.
 					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus.
-						Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis
-						cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus
-						luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu
-						ultrices. In massa tempor nec feugiat nisl pretium fusce.
-					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Experience</h2>
+				<div class="content">
+					<TimeLine timeline={experiences} />
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Education</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<TimeLine timeline={education} />
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Skills</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<ul class="max-w-md space-y-1 list-disc list-inside">
+						<li>Angular</li>
+						<li>Ionic</li>
+						<li>Flutter</li>
+						<li>Git</li>
+						<li>Tailwind</li>
+						<li>Bootstrap</li>
+						<li>React.js</li>
+						<li>Firebase</li>
+					</ul>
 				</div>
 			</section>
 		</main>
