@@ -2,7 +2,7 @@
 title: Employee SR
 publishDate: 2023-03-14 00:00:00
 img: /assets/employee-sr.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Employee SR app preview
 description: |
   Recommendation system that helps to identify, recommend and describe the contact details of people who work in the footwear sector.
 tags:
