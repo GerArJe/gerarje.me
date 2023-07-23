@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title = `${FULL_NAME}: Personal Site`, description = `The personal site of ${FULL_NAME}` } = Astro.props;
-const canonicalURL = new URL(Astro.url, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <meta charset="UTF-8" />
