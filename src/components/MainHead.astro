@@ -7,12 +7,11 @@ interface Props {
 	description?: string | undefined;
 }
 
-const { title = `${FULL_NAME}: Personal Site`, description = `The personal site of ${FULL_NAME}` } = Astro.props;
+const { title = `${FULL_NAME} - @gerarje`, description = `${FULL_NAME} portfolio` } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="generator" content={Astro.generator} />
@@ -55,14 +54,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content="" />
+<meta name="description" property="og:description" content={description} />
+<meta property="og:image" content="/assets/og-image.png" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content="" />
+<meta name="twitter:image" content="/assets/og-image.png" />
 <meta name="twitter:image:alt" content={title} />
 <meta name="twitter:site" content="@gerarje" />
 <meta name="twitter:creator" content="@gerarje" />
