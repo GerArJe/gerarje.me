@@ -17,7 +17,7 @@ tags:
 
 The objective of this project was to develop a prototype mobile application that uses Machine Learning to generate employee recommendations for companies in the footwear sector.
 
-The application has two user profiles: company and employee. Both profiles interact to complete the full interaction. The company is looking for new employees, and the employee is looking to be hired.
+The application has two user profiles: company and employee. Both profiles interact to complete the full interaction. Companies that are looking for new employees, and the employees that are looking to be hired.
 
 ## Repository
 
